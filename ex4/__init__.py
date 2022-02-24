@@ -7,9 +7,6 @@ def cross_join(employees, departments):
     :return: Генератор пар (LastName, DepartmentName)
     """
 
-    i_max = len(employees)
-    j_max = len(departments)
-
-    for i in range(i_max):
-        for j in range(j_max):
-            yield employees[i], departments[j]
+    for employee in employees:
+        for department in departments:
+            yield employee, department

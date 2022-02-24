@@ -3,7 +3,6 @@ import time
 from ex2 import fetcher
 
 CALL_COUNT = 10
-times = 0
 
 
 def benchmark(num):
@@ -16,7 +15,7 @@ def benchmark(num):
 
     def wrapper(func):
         def wrapped(*args, **kwargs):
-            global times
+            times = 0
 
             for _ in range(num):
                 start = time.time()
